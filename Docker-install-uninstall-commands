@@ -1,0 +1,21 @@
+Docker Installation and Uninstalltion in ubuntu 21.01
+-----------------------------------------------------
+
+	installation:
+	==============
+		=> sudo apt update
+		=> sudo apt install curl -y
+		=> curl -fsSL https://get.docker.com -o get-docker.sh
+		=> sh get-docker.sh
+		=> sudo usermod -aG docker $USER
+		=> docker --version
+		
+	uninstallation:
+	===============
+		=> dpkg -l | grep -i docker
+		=> sudo apt-get purge docker-ce docker-ce-cli docker-ce-rootless-extras 
+		   docker-scan-plugin
+		=> sudo rm -rf /var/lib/docker
+		=> sudo apt autoremove
+		
+		
